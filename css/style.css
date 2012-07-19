@@ -1,0 +1,35 @@
+html { 
+	height:100%;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #333;
+	background-image: -webkit-radial-gradient(50% 50%, circle, #888 0, #333 240px);
+	background-image: -moz-radial-gradient(50% 50%, circle, #888 0, #333 240px);
+	background-image: radial-gradient(50% 50%, circle, #888 0, #333 240px);
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+}
+h1 { 
+	color: #fff; 
+	text-shadow: 0px 0px 3px #fff;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+#messageContainer {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	background: url(../images/tri.png) center center no-repeat;
+}
+#message {
+	color: #fff;
+	font-size: 1.75em;
+	margin: 0 auto;
+	padding-top: 65px;
+	text-align: center;
+	width: 150px;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, .5); 
+}
