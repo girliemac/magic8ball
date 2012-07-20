@@ -14,4 +14,4 @@ http://girliemac.github.com/magic8ball/
 http://goo.gl/5Cj4d or use the QR below
 
 ### QR for the URL
-![QR Code for http://goo.gl/5Cj4d](./8ballurl.png)
+![QR Code for http://goo.gl/5Cj4d](/8ballurl.png)
