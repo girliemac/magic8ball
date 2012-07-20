@@ -32,3 +32,6 @@ h1 {
 	width: 150px;
 	text-shadow: 5px 5px 5px rgba(0, 0, 0, .5); 
 }
+#warning {
+	color: red;
+}
