@@ -17,5 +17,7 @@ http://goo.gl/5Cj4d or use the QR below
 ![QR Code for http://goo.gl/5Cj4d](https://github.com/girliemac/magic8ball/raw/master/8ballurl.png)
 
 #Known Bugs
-- The "answer" (the text in the triangle) is buggy on Firefox Mobile. 
-Apparently, it does not like to update the text as the trianle shapes transforms upon the deviceorientation event, so the text sometimes gets stuck and doesn't randomize.
+- The "answer" (the text in the triangle) is super janky on Firefox Mobile. 
+Firefox doesn't seem to update the text quickly as the trianle shapes transforms.
+- This demo eats up the battery like crazy. (I have a battery status API demo on http://jsfiddle.net/girlie_mac/YcV33/ but I didn't bother adding more stuff on this demo.
+- I think the Android browser (not Chrome) is too sensitive, so even I set a device on a desk, beta and gamma keep changing the values.
