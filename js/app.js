@@ -73,8 +73,8 @@
 		transform = 'rotateZ(' +alpha+ 'deg) rotateX(' +beta+ 'deg) rotateY(' +gamma+ 'deg)';			
 		// 3D Transform	
 		messageContainer.style.webkitTransform = messageContainer.style.MozTransform = messageContainer.style.transform = transform;
-		// 2D for Opera
-		messageContainer.style.OTransform = messageContainer.style.msTransform = 'rotate(' +alpha+ 'deg)'; 
+		// 2D-only for Opera
+		messageContainer.style.OTransform = 'rotate(' +alpha+ 'deg)'; 
 
 	}
 
