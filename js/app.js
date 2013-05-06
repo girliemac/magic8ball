@@ -1,9 +1,10 @@
 /*************************************
+ * Magical Eight Ball
  * HTML5 Device Orientation API Demo
  * Tomomi Imura @girlie_mac
  ************************************/
 
-window.onload = function() {
+(function() {
 	var isStopped = false;
 	var alpha = beta = gamma = 0;
 
@@ -29,22 +30,16 @@ window.onload = function() {
 		'Outlook not so good',
 		'Very doubtful'
 	];
+	
 	var answer = answers[Math.floor(Math.random() * (answers.length))];
 	var messageContainer = document.getElementById('messageContainer');
 
-/*
-	messageContainer.addEventListener('click', function() {
-		stopped = (stopped) ? false : true;
-		
-	}, false);
-*/
-	
 	if (window.DeviceOrientationEvent){
 		window.addEventListener('deviceorientation', update, true);
 	
 	} else {
 		var warning = document.getElementById('warning');
-		warning.innerHTML = 'This browser does not support the DeviceOrientation Events :-(';
+		warning.textContent = 'This browser does not support the DeviceOrientation Events :-(';
 	}
 	
 	function update(event){
@@ -57,7 +52,7 @@ window.onload = function() {
 		beta = Math.floor(event.beta);
 		gamma = Math.floor(event.gamma);
 		
-		debug.innerHTML = 'Alpha: '+alpha+ ', Beta: ' +beta+ ', and Gamma is: ' +gamma;
+		debug.textContent = 'Alpha: '+alpha+ ', Beta: ' +beta+ ', and Gamma is: ' +gamma;
 		
 		
 		// a device is place on a flat surface
@@ -69,7 +64,7 @@ window.onload = function() {
 			
 		} else {
 			message.style.opacity = 1;
-			debug.innerHTML += '. Device is on a flat surface: ' +isStopped;
+			debug.textContent += '. Device is on a flat surface: ' +isStopped;
 		}
 		
 		message.innerHTML = answer;
@@ -77,12 +72,12 @@ window.onload = function() {
 		
 		transform = 'rotateZ(' +alpha+ 'deg) rotateX(' +beta+ 'deg) rotateY(' +gamma+ 'deg)';			
 		// 3D Transform	
-		messageContainer.style.webkitTransform = messageContainer.style.MozTransform = transform;
+		messageContainer.style.webkitTransform = messageContainer.style.MozTransform = messageContainer.style.transform = transform;
 		// 2D for Opera
 		messageContainer.style.OTransform = messageContainer.style.msTransform = 'rotate(' +alpha+ 'deg)'; 
 
 	}
 
-}
+})();
 
 
