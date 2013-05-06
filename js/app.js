@@ -40,6 +40,7 @@
 	} else {
 		var warning = document.getElementById('warning');
 		warning.textContent = 'This browser does not support the DeviceOrientation Events :-(';
+		message.textContent = 'Your browser sucks';
 	}
 	
 	function update(event){
@@ -67,8 +68,7 @@
 			debug.textContent += '. Device is on a flat surface: ' +isStopped;
 		}
 		
-		message.innerHTML = answer;
-		// this is buggy on FF. If the message is putside of the animated triangle, it works fine.
+		message.textContent = answer;
 		
 		transform = 'rotateZ(' +alpha+ 'deg) rotateX(' +beta+ 'deg) rotateY(' +gamma+ 'deg)';			
 		// 3D Transform	
